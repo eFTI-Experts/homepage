@@ -32,9 +32,9 @@
       .translate([550, 350]);
 
     var path = d3.geoPath().projection(projection);
-    var keyCountries = [];
-    var efti4EuCountries = ["Estonia", "Finland", "Lithuania", "Germany", "France", "Austria", "Italy", "Portugal"];
-    var efti4AllCountries = ["Sweden", "Denmark", "Luxembourg", "Greece"];
+    var efti4LiveCountries = ["Norway", "Latvia", "Netherlands", "Poland", "Czech Republic", "Slovakia", "Romania", "Slovenia", "Spain"];
+    var efti4AllCountries = ["Sweden", "Denmark", "Ireland", "Greece", "Cyprus"];
+    var efti4EuCountries = ["Finland", "Estonia", "Lithuania", "Germany", "Belgium", "France", "Austria", "Italy", "Portugal", "Luxembourg"];
     var tooltip = d3.select("#map-tooltip");
 
     d3.json("/data/europenew.geojson")
@@ -46,10 +46,10 @@
           .attr("class", "country")
           .attr("d", path)
           .attr("fill", function(d) {
-            var countryName = (d.properties.name || "").toLowerCase();
-            if (keyCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#4A58A6";
-            if (efti4EuCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#4A58A6";
+            var countryName = (d.properties.NAME || "").toLowerCase();
+            if (efti4LiveCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#4A58A6";
             if (efti4AllCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#EEEDFF";
+            if (efti4EuCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#8B98C8";
             return "#ccc";
           })
           .on("mouseover", function(event, d) {
@@ -57,7 +57,7 @@
             d3.select(this).raise()
               .transition().duration(200)
               .attr("transform", "translate(" + centroid[0] + "," + centroid[1] + ") scale(1.1) translate(" + -centroid[0] + "," + -centroid[1] + ")");
-            tooltip.style("display", "block").text(d.properties.name || "Country");
+            tooltip.style("display", "block").text(d.properties.NAME || "Country");
           })
           .on("mousemove", function(event) {
             tooltip.style("left", (event.clientX + 10) + "px").style("top", (event.clientY + 10) + "px");
@@ -68,7 +68,8 @@
           });
 
         var legendData = [
-          { color: "#4A58A6", label: "eFTI4EU Countries" },
+          { color: "#4A58A6", label: "eFTI4LIVE Countries" },
+          { color: "#8B98C8", label: "eFTI4EU Countries" },
           { color: "#EEEDFF", label: "eFTI4ALL Countries" }
         ];
         var legendX = 20;
