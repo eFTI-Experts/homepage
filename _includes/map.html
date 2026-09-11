@@ -48,7 +48,7 @@
           .attr("fill", function(d) {
             var countryName = (d.properties.NAME || "").toLowerCase();
             if (efti4LiveCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#4A58A6";
-            if (efti4AllCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#EEEDFF";
+            if (efti4AllCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#B8B5D9";
             if (efti4EuCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#8B98C8";
             return "#ccc";
           })
@@ -69,8 +69,8 @@
 
         var legendData = [
           { color: "#4A58A6", label: "eFTI4LIVE Countries" },
-          { color: "#8B98C8", label: "eFTI4EU Countries" },
-          { color: "#EEEDFF", label: "eFTI4ALL Countries" }
+          { color: "#B8B5D9", label: "eFTI4ALL Countries" },
+          { color: "#8B98C8", label: "eFTI4EU Countries" }
         ];
         var legendX = 20;
         var legendY = 600 - (legendData.length * 30) - 20;
