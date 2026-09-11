@@ -13,7 +13,7 @@
   <div class="p-6">
     <h3 class="font-bold text-xl mb-1">{{ include.name }}</h3>
     <div class="text-brand font-medium mb-3">{{ include.title }}</div>
-    <div class="text-gray-600 mb-4 line-clamp-4 prose prose-sm max-w-none">{{ include.summary | markdownify }}</div>
+    <div class="text-gray-600 mb-4 line-clamp-4 prose prose-sm max-w-none">{{ include.summary | pages_rich }}</div>
     <span class="text-brand font-bold hover:underline hover:cursor-pointer">Read more &rarr;</span>
   </div>
 </div>
