@@ -1,0 +1,116 @@
+<div class="lg:col-span-3 rounded-xl h-fit shadow-md">
+  <div id="europe-map" class="rounded-lg flex items-center"></div>
+  <div id="map-tooltip"></div>
+</div>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script>
+  function createMap() {
+    d3.select("#europe-map svg").remove();
+
+    var isMobile = window.innerWidth <= 768;
+    var mapHeight = isMobile ? 300 : 500;
+
+    d3.select("#europe-map")
+      .style("height", mapHeight + "px")
+      .style("width", "100%");
+
+    var svg = d3.select("#europe-map").append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", "0 0 960 600")
+      .attr("preserveAspectRatio", "xMidYMid meet");
+
+    svg.append("rect")
+      .attr("width", 960)
+      .attr("height", 600)
+      .attr("fill", "white");
+
+    var projection = d3.geoMercator()
+      .center([20, 52])
+      .scale(500)
+      .translate([550, 350]);
+
+    var path = d3.geoPath().projection(projection);
+    var keyCountries = [];
+    var efti4EuCountries = ["Estonia", "Finland", "Lithuania", "Germany", "France", "Austria", "Italy", "Portugal"];
+    var efti4AllCountries = ["Sweden", "Denmark", "Luxembourg", "Greece"];
+    var tooltip = d3.select("#map-tooltip");
+
+    d3.json("/data/europenew.geojson")
+      .then(function(geoData) {
+        svg.selectAll("path")
+          .data(geoData.features)
+          .enter()
+          .append("path")
+          .attr("class", "country")
+          .attr("d", path)
+          .attr("fill", function(d) {
+            var countryName = (d.properties.name || "").toLowerCase();
+            if (keyCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#4A58A6";
+            if (efti4EuCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#4A58A6";
+            if (efti4AllCountries.some(function(k) { return k.toLowerCase() === countryName; })) return "#EEEDFF";
+            return "#ccc";
+          })
+          .on("mouseover", function(event, d) {
+            var centroid = path.centroid(d);
+            d3.select(this).raise()
+              .transition().duration(200)
+              .attr("transform", "translate(" + centroid[0] + "," + centroid[1] + ") scale(1.1) translate(" + -centroid[0] + "," + -centroid[1] + ")");
+            tooltip.style("display", "block").text(d.properties.name || "Country");
+          })
+          .on("mousemove", function(event) {
+            tooltip.style("left", (event.clientX + 10) + "px").style("top", (event.clientY + 10) + "px");
+          })
+          .on("mouseout", function() {
+            d3.select(this).transition().duration(200).attr("transform", "translate(0,0) scale(1)");
+            tooltip.style("display", "none");
+          });
+
+        var legendData = [
+          { color: "#4A58A6", label: "eFTI4EU Countries" },
+          { color: "#EEEDFF", label: "eFTI4ALL Countries" }
+        ];
+        var legendX = 20;
+        var legendY = 600 - (legendData.length * 30) - 20;
+
+        var legend = svg.append("g")
+          .attr("class", "legend")
+          .attr("transform", "translate(" + legendX + "," + legendY + ")");
+
+        legend.selectAll("g")
+          .data(legendData)
+          .enter()
+          .append("g")
+          .attr("transform", function(d, i) { return "translate(0, " + (i * 30) + ")"; })
+          .each(function(d) {
+            d3.select(this).append("rect")
+              .attr("width", 20).attr("height", 20)
+              .attr("fill", d.color).attr("stroke", "#333");
+            d3.select(this).append("text")
+              .attr("x", 30).attr("y", 15)
+              .text(d.label).attr("fill", "#333");
+          });
+      })
+      .catch(function(error) {
+        console.error("Error loading GeoJSON:", error);
+      });
+  }
+
+  window.addEventListener('load', function() {
+    setTimeout(createMap, 100);
+  });
+
+  document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') createMap();
+  });
+
+  var prevWidth = window.innerWidth;
+  window.addEventListener('resize', function() {
+    var currentWidth = window.innerWidth;
+    if (currentWidth !== prevWidth) {
+      prevWidth = currentWidth;
+      createMap();
+    }
+  });
+</script>

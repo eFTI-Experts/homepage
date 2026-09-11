@@ -1,0 +1,19 @@
+<div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:cursor-pointer transition-all duration-300"
+  data-name="{{ include.name }}"
+  data-title="{{ include.title }}"
+  data-summary="{{ include.summary }}"
+  data-picture="{{ include.picture }}"
+  onclick="handleMemberClick(this)">
+  <div class="h-64 relative bg-brand/10 flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 absolute w-24 text-brand/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+    <img src="{{ include.picture }}" class="object-cover w-56 h-56 absolute rounded-xl" alt="Team member - {{ include.name }}" loading="lazy">
+  </div>
+  <div class="p-6">
+    <h3 class="font-bold text-xl mb-1">{{ include.name }}</h3>
+    <div class="text-brand font-medium mb-3">{{ include.title }}</div>
+    <p class="text-gray-600 mb-4 line-clamp-4 text-justify">{{ include.summary }}</p>
+    <span class="text-brand font-bold hover:underline hover:cursor-pointer">Read more &rarr;</span>
+  </div>
+</div>

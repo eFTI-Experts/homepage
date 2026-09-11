@@ -1,0 +1,54 @@
+<div id="contact-form" class="max-w-xl">
+  <h2 class="text-2xl font-bold mb-2">Send Us a Message</h2>
+  <p class="mb-6">Leave your inquiry and we'll get back to you as soon as possible.</p>
+
+  <form action="https://formsubmit.co/{{ site.email }}" method="POST" class="space-y-4">
+    <input type="hidden" name="_subject" value="New inquiry: {{ page.title }}">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="hidden" name="_template" value="table">
+
+    <div>
+      <label for="name" class="block font-bold mb-1">Name</label>
+      <input type="text" id="name" name="name" required
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand">
+    </div>
+
+    <div>
+      <label for="email" class="block font-bold mb-1">Email</label>
+      <input type="email" id="email" name="email" required
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand">
+    </div>
+
+    <div>
+      <label for="phone" class="block font-bold mb-1">Phone (optional)</label>
+      <input type="tel" id="phone" name="phone"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand">
+    </div>
+
+    <div>
+      <label for="inquiry_type" class="block font-bold mb-1">Inquiry Type</label>
+      <select id="inquiry_type" name="inquiry_type"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand">
+        <option value="general">General Inquiry</option>
+        <option value="consulting">Consulting Services</option>
+        <option value="partnership">Partnership Opportunity</option>
+        <option value="funding">Funding & Grants</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="message" class="block font-bold mb-1">Message</label>
+      <textarea id="message" name="message" rows="4" required
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
+    </div>
+
+    <button type="submit"
+      class="bg-brand text-white font-bold px-6 py-2 rounded-lg hover:bg-brand-dark transition flex items-center gap-2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.9471 1.02871C24.0017 0.892413 24.015 0.743103 23.9855 0.599288C23.956 0.455474 23.885 0.32348 23.7812 0.21967C23.6774 0.11586 23.5454 0.0448002 23.4015 0.015299C23.2577 -0.0142021 23.1084 -0.000846891 22.9721 0.0537091L1.15162 8.78221L0.472125 9.05221C0.34371 9.10343 0.231953 9.18915 0.149198 9.2999C0.0664433 9.41066 0.0159116 9.54213 0.00318483 9.67979C-0.00954198 9.81746 0.0160314 9.95597 0.0770801 10.08C0.138129 10.2041 0.232277 10.3088 0.349125 10.3827L0.964125 10.7727L8.45812 15.5427L13.2251 23.0352L13.6181 23.6532C13.6923 23.7696 13.7971 23.8633 13.921 23.924C14.045 23.9846 14.1833 24.0099 14.3207 23.997C14.4581 23.9842 14.5892 23.9336 14.6998 23.851C14.8103 23.7684 14.8959 23.6569 14.9471 23.5287L23.9471 1.02871Z" fill="#FFFFFF"/>
+      </svg>
+      Send Message
+    </button>
+  </form>
+</div>

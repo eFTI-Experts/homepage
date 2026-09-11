@@ -1,0 +1,28 @@
+title: eFTI Experts
+description: "Estonia's Premier eFTI Consultancy. We support EU member states with eFTI implementation and development, delivering comprehensive digital solutions for freight transport documentation."
+url: https://eftiexperts.eu
+email: team@eftiexperts.eu
+permalink: pretty
+exclude:
+  - vendor
+  - node_modules
+  - .bundle
+  - .idea
+  - .github
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - build.sh
+  - LICENCE
+  - AGENTS.md
+include:
+  - _pages
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: _pages
+    values:
+      layout: page

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-center">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="text-center text-xl text-gray-600 max-w-4xl mx-auto mb-12">{{ page.subtitle }}</p>
+    {% endif %}
+
+    <div class="prose max-w-none mb-12">
+      {{ content }}
+    </div>
+
+    {% if page.url contains "/contact/" %}
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 mt-12">
+        <!-- Contact Info -->
+        <div class="lg:col-span-1">
+          <div class="bg-brand rounded-2xl p-4 sm:p-8 text-white shadow-xl h-full flex flex-col relative overflow-hidden justify-between gap-6">
+            <div class="text-center">
+              <h3 class="text-3xl font-bold mb-2">Get in Touch</h3>
+              <hr class="border-white/30 w-12 mx-auto mb-4">
+              <p class="opacity-90 text-lg leading-relaxed">
+                We'd love to hear from you! Whether you have a question, want to explore
+                collaboration opportunities, or need a personalized offer, leave your message,
+                and we'll get back to you shortly.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center gap-6">
+              <address class="not-italic space-y-2">
+                <a href="mailto:{{ site.email }}" class="flex items-center gap-3 p-3 text-lg hover:bg-white/10 rounded-lg transition-colors">
+                  <svg class="text-pink-500 flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0.075 5.3325C0.226227 4.66986 0.597983 4.07822 1.12938 3.65446C1.66078 3.23071 2.32033 2.99995 3 3H21C21.6797 2.99995 22.3392 3.23071 22.8706 3.65446C23.402 4.07822 23.7738 4.66986 23.925 5.3325L12 12.621L0.075 5.3325ZM0 7.0455V17.7015L8.7045 12.3645L0 7.0455ZM10.1415 13.245L0.2865 19.2855C0.52999 19.7989 0.91429 20.2326 1.39467 20.5362C1.87505 20.8397 2.43176 21.0005 3 21H21C21.5681 21.0001 22.1246 20.8389 22.6048 20.5351C23.0849 20.2313 23.4688 19.7975 23.712 19.284L13.857 13.2435L12 14.379L10.1415 13.2435V13.245ZM15.2955 12.366L24 17.7015V7.0455L15.2955 12.3645V12.366Z"/>
+                  </svg>
+                  <span>{{ site.email }}</span>
+                </a>
+                <p class="flex items-center gap-3 p-3 text-lg">
+                  <svg class="text-pink-500 w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 28">
+                    <path d="M12 14C12.825 14 13.5315 13.7256 14.1195 13.1768C14.7065 12.6289 15 11.97 15 11.2C15 10.43 14.7065 9.7706 14.1195 9.2218C13.5315 8.67393 12.825 8.4 12 8.4C11.175 8.4 10.469 8.67393 9.882 9.2218C9.294 9.7706 9 10.43 9 11.2C9 11.97 9.294 12.6289 9.882 13.1768C10.469 13.7256 11.175 14 12 14ZM12 28C7.975 24.8033 4.969 21.8339 2.982 19.0918C0.994 16.3506 0 13.8133 0 11.48C0 7.98 1.2065 5.19167 3.6195 3.115C6.0315 1.03833 8.825 0 12 0C15.175 0 17.9685 1.03833 20.3805 3.115C22.7935 5.19167 24 7.98 24 11.48C24 13.8133 23.0065 16.3506 21.0195 19.0918C19.0315 21.8339 16.025 24.8033 12 28Z"/>
+                  </svg>
+                  <span>Laeva 2, Tallinn, 10111, Estonia</span>
+                </p>
+              </address>
+
+              <div class="w-full mb-6">
+                <div class="relative pt-[56.25%] rounded-lg overflow-hidden">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2028.5410914519268!2d24.754650277544975!3d59.440728002098375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469293672729598d%3A0x1822df50aba99293!2sNavigatori%20%C3%A4rimaja%2C%20Laeva%20tn%202%2C%2010111%20Tallinn!5e0!3m2!1set!2see!4v1741527206909!5m2!1set!2see"
+                    class="absolute top-0 left-0 w-full h-full"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex w-full justify-center items-center z-10">
+              <a href="https://www.linkedin.com/company/efti-experts/" target="_blank" rel="noopener noreferrer">
+                <svg class="text-pink-500 w-16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22 3.47059V20.5294C22 20.9194 21.8451 21.2935 21.5693 21.5693C21.2935 21.8451 20.9194 22 20.5294 22H3.47059C3.08056 22 2.70651 21.8451 2.43073 21.5693C2.15494 21.2935 2 20.9194 2 20.5294V3.47059C2 3.08056 2.15494 2.70651 2.43073 2.43073C2.70651 2.15494 3.08056 2 3.47059 2H20.5294C20.9194 2 21.2935 2.15494 21.5693 2.43073C21.8451 2.70651 22 3.08056 22 3.47059ZM7.88235 9.64706H4.94118V19.0588H7.88235V9.64706ZM8.14706 6.41177C8.14861 6.18929 8.10632 5.96869 8.02261 5.76255C7.93891 5.55642 7.81542 5.36879 7.65919 5.21039C7.50297 5.05198 7.31708 4.92589 7.11213 4.83933C6.90718 4.75277 6.68718 4.70742 6.46471 4.70588H6.41177C5.95934 4.70588 5.52544 4.88561 5.20552 5.20552C4.88561 5.52544 4.70588 5.95934 4.70588 6.41177C4.70588 6.86419 4.88561 7.29809 5.20552 7.61801C5.52544 7.93792 5.95934 8.11765 6.41177 8.11765C6.63426 8.12312 6.85565 8.0847 7.06328 8.00458C7.27092 7.92447 7.46074 7.80422 7.62189 7.65072C7.78304 7.49722 7.91237 7.31346 8.00248 7.10996C8.09259 6.90646 8.14172 6.6872 8.14706 6.46471V6.41177ZM19.0588 13.3412C19.0588 10.5118 17.2588 9.41177 15.4706 9.41177C14.8851 9.38245 14.3021 9.50715 13.7799 9.77345C13.2576 10.0397 12.8143 10.4383 12.4941 10.9294H12.4118V9.64706H9.64706V19.0588H12.5882V14.0529C12.5457 13.5403 12.7072 13.0315 13.0376 12.6372C13.3681 12.2429 13.8407 11.9949 14.3529 11.9471H14.4647C15.4 11.9471 16.0941 12.5353 16.0941 14.0176V19.0588H19.0353L19.0588 13.3412Z"/>
+                </svg>
+              </a>
+            </div>
+
+            <img class="absolute -bottom-40 -right-40 opacity-20 pointer-events-none" src="/images/bubbles.png" alt="" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-xl shadow-lg p-4 sm:p-8">
+            {% include contact-form.html %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>

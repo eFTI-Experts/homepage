@@ -1,0 +1,7 @@
+# Team members - update with actual data from Django database
+# Each member needs: name, title, summary, picture (path in /images/members/)
+- name: "Team Member"
+  title: "Position"
+  summary: "Bio information will be populated from the Django database."
+  picture: "/images/members/placeholder.jpg"
+  order: 1

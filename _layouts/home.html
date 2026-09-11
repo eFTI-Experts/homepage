@@ -1,0 +1,338 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<div id="hero-overlay" class="fixed top-0 left-0 z-10 h-full w-screen max-w-screen flex flex-col items-center justify-center transition-all duration-1000" onclick="fadeUp()" ontouchmove="fadeUp()" onwheel="if (event.deltaY > 0) { fadeUp(); }">
+  <div class="flex z-10 p-4 sm:p-8 h-full w-full max-w-7xl mx-auto justify-center items-center">
+    <div class="flex flex-col items-start text-white w-full md:w-3/5 space-y-4 sm:space-y-8">
+      <div class="animate-fadeIn" style="animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards;">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight">eFTI Experts</h1>
+        <h2 class="text-xl sm:text-3xl lg:text-4xl mt-2 font-light text-gray-100">Guiding Your Paperless Future in Europe</h2>
+      </div>
+
+      <div class="[@media(max-height:700px)]:hidden h-1 w-24 bg-white rounded-full animate-fadeIn" style="animation-delay: 0.6s; opacity: 0; animation-fill-mode: forwards;"></div>
+
+      <p class="[@media(max-height:700px)]:hidden text-md sm:text-lg md:text-xl text-gray-200 font-medium max-w-xl animate-fadeIn" style="animation-delay: 0.9s; opacity: 0; animation-fill-mode: forwards;">
+        We provide expert consulting and consortium management to drive uptake of eFTI
+        and related digital solutions. We contribute to eFTI roadmaps for EU member states,
+        consult the European Commission and partner with businesses in their eFTI journey.
+      </p>
+
+      <div class="flex gap-4 pt-6 animate-fadeIn" style="animation-delay: 1.2s; opacity: 0; animation-fill-mode: forwards;">
+        <a href="/about-us/" class="px-4 sm:px-8 py-2 sm:py-3 bg-white text-brand rounded-full font-bold hover:bg-opacity-90 transition-all text-center">Learn More</a>
+        <a href="/contact/" class="px-4 sm:px-8 py-2 sm:py-3 border-2 border-white rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition-all text-center">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute z-50 bottom-8 left-0 right-0 flex justify-center animate-bounce">
+    <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="video-overlay-texture"></div>
+  <div class="absolute top-0 left-0 -z-10 w-full h-full">
+    <video autoplay muted loop preload="auto" class="w-full h-full object-cover">
+      <source src="/images/trucks.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="absolute top-0 left-0 -z-20 w-full h-full bg-white"></div>
+</div>
+
+<div id="content-container" class="flex flex-col items-center transition-all duration-1000">
+
+  <!-- Our Expertise -->
+  <section class="relative w-screen flex flex-col gap-2 mb-2">
+    <div class="flex flex-wrap gap-2 xl:flex-nowrap">
+      <div class="hidden xl:block xl:w-[50vw] relative group overflow-hidden">
+        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/images/containers.avif" alt="Containers">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand/80 to-transparent flex items-center">
+          <div class="px-12 max-w-md">
+            <h2 class="text-white text-3xl font-bold mb-4">Transforming Transport Documentation</h2>
+            <p class="text-white/90 text-lg">Enabling a paperless, efficient, and sustainable freight ecosystem across Europe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-brand-light p-6 sm:p-12 lg:p-16 gap-8 w-full items-center xl:w-[50vw]">
+        <div class="max-w-2xl">
+          <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="h-1 w-10 bg-brand"></div>
+              <h3 class="font-bold text-xl text-[#475569] uppercase tracking-wider">OUR EXPERTISE</h3>
+            </div>
+            <h1 class="font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight">eFTI Experts: Driving Digital &amp; Sustainable Logistics</h1>
+          </div>
+
+          <div class="space-y-6 text-gray-700">
+            <p class="text-gray-700 mb-6">eFTI Experts specialises in integrating eFTI systems and digital logistics solutions to enhance sustainability and efficiency. Our key offerings include:</p>
+            <div class="space-y-6">
+              <div class="flex items-start" data-aos="fade-up-right">
+                <div class="flex-shrink-0 h-10 w-10 bg-brand rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <div class="ml-4">
+                  <h2 class="text-xl font-bold text-gray-800">eFTI Compliance &amp; Strategy</h2>
+                  <p class="mt-1 text-gray-600">Expert guidance on regulatory frameworks and implementation.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start" data-aos="fade-up-right">
+                <div class="flex-shrink-0 h-10 w-10 bg-brand rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div class="ml-4">
+                  <h2 class="text-xl font-bold text-gray-800">Project &amp; Funding Support</h2>
+                  <p class="mt-1 text-gray-600">Consortium management, grant acquisition, and financing assistance.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start" data-aos="fade-up-right">
+                <div class="flex-shrink-0 h-10 w-10 bg-brand rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                </div>
+                <div class="ml-4">
+                  <h2 class="text-xl font-bold text-gray-800">Consultancy of Digital Transformation &amp; IT Solutions</h2>
+                  <p class="mt-1 text-gray-600">Smart logistics, IT procurement, and platform optimisation.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start" data-aos="fade-up-right">
+                <div class="flex-shrink-0 h-10 w-10 bg-brand rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                </div>
+                <div class="ml-4">
+                  <h2 class="text-xl font-bold text-gray-800">Training &amp; Capacity Building</h2>
+                  <p class="mt-1 text-gray-600">Workshops and knowledge sharing for businesses and authorities.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start" data-aos="fade-up-right">
+                <div class="flex-shrink-0 h-10 w-10 bg-brand rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div class="ml-4">
+                  <h2 class="text-xl font-bold text-gray-800">Sustainable &amp; Smart Logistics</h2>
+                  <p class="mt-1 text-gray-600">Efficiency strategies with a focus on environmental impact.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="/services/" class="mt-8 inline-block rounded-3xl bg-brand shadow-lg px-8 py-3 text-white font-bold transition-all duration-300 hover:scale-105 text-center text-xl hover:cursor-pointer">
+            Discover Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-flow-col grid-cols-3 h-24 md:h-40 gap-2">
+      <div class="overflow-hidden"><img src="/images/european-flag.avif" class="h-full w-full object-cover hover:scale-110 transition-transform duration-700" alt="European flag" loading="lazy"></div>
+      <div class="overflow-hidden"><img src="/images/tech-meeting.avif" class="h-full w-full object-cover hover:scale-110 transition-transform duration-700" alt="Tech meeting" loading="lazy"></div>
+      <div class="overflow-hidden"><img src="/images/lightbulb.avif" class="h-full w-full object-cover hover:scale-110 transition-transform duration-700" alt="Lightbulb" loading="lazy"></div>
+    </div>
+  </section>
+
+  <!-- About Our Expertise -->
+  <section class="relative w-screen flex flex-col gap-4 bg-gradient-to-b from-brand-light to-white pt-4">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h3 class="inline-block text-brand font-bold text-xl relative pb-3 mb-2">
+          ABOUT OUR EXPERTISE
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 w-24 bg-gradient-to-r from-brand to-[#6a77c7]"></span>
+        </h3>
+        <h1 class="font-extrabold text-3xl sm:text-4xl lg:text-5xl text-gray-800 max-w-4xl mx-auto">Specialized eFTI &amp; Smart Logistics Consultancy</h1>
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center w-full mx-auto px-6">
+      <div class="flex flex-col justify-center max-w-3xl">
+        <p class="text-gray-700 text-lg text-center mb-8 leading-relaxed">
+          Renowned for guiding businesses and the public sector through the strategic transition to eFTI, our experts bring extensive experience in EU projects, public sector consulting, European Commission advisory, IT solution development, and training.
+        </p>
+
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div data-aos="flip-down" class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <span class="text-brand text-4xl font-bold block">39</span>
+            <span class="text-gray-600 font-medium">Partners Supported</span>
+          </div>
+          <div data-aos="flip-down" class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <span class="text-brand text-4xl font-bold block">14</span>
+            <span class="text-gray-600 font-medium">Member States</span>
+          </div>
+          <div data-aos="flip-down" class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <span class="text-brand text-4xl font-bold block">100%</span>
+            <span class="text-gray-600 font-medium">Digital Solutions</span>
+          </div>
+          <div data-aos="flip-down" class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            <span class="text-brand text-4xl font-bold flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </span>
+            <span class="text-gray-600 font-medium">Expert Delivery</span>
+          </div>
+        </div>
+
+        <a href="/about-us/" class="w-2/3 self-center rounded-full bg-gradient-to-r from-brand to-[#6272c8] shadow-lg px-8 py-4 text-white font-bold transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl text-center">
+          Meet Our Team
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full h-48 mt-12 relative overflow-hidden">
+      <img src="/images/efti-team.jpg" class="w-full h-full object-cover" alt="eFTI team" loading="lazy">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand/70 to-transparent flex items-center">
+        <div class="px-12 max-w-lg">
+          <h2 class="text-white text-2xl font-bold">Strategic Advisory Services</h2>
+          <p class="text-white/90">Consultants specialised in digital and smart logistics with extensive EU project experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Initiatives -->
+  <section class="py-8 px-5 w-full">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+      <div class="flex flex-col justify-center gap-8 md:w-1/2">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="h-1 w-10 bg-brand"></div>
+            <h3 class="font-bold text-xl text-[#475569] uppercase tracking-wider">OUR INITIATIVES</h3>
+          </div>
+          <h1 class="font-extrabold text-3xl sm:text-5xl mt-2">Key Projects</h1>
+        </div>
+
+        <p class="text-left font-normal">
+          eFTI Experts leads the coordination and support efforts for the
+          <a href="https://efti4all.eu/" class="text-brand hover:underline font-bold">eFTI4ALL</a>
+          project&mdash;a CEF-funded consortium initiative dedicated to establishing a robust eFTI
+          ecosystem. The project fosters stronger collaboration between Member States, eFTI
+          stakeholders, and economic operators.
+        </p>
+
+        <a href="/projects/" class="rounded-3xl text-brand border-brand border-2 shadow-xl max-w-fit p-6 px-8 font-bold transition-all duration-300 hover:scale-105 text-center text-xl py-2 hover:cursor-pointer">
+          Explore Our Projects
+        </a>
+      </div>
+
+      <div class="md:w-1/2 flex flex-col gap-6">
+        <div data-aos="fade-right" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+          <div class="bg-brand h-2"></div>
+          <div class="p-6">
+            <h3 class="font-bold text-xl">eFTI4ALL</h3>
+            <p class="mt-2 text-gray-600">Building a functioning eFTI ecosystem with emphasis on seamless interaction between authorities and eFTI Platforms.</p>
+            <div class="flex items-center gap-2 mt-3">
+              <div class="h-6 w-6 rounded-full bg-brand flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              </div>
+              <span class="text-sm font-medium">CEF-funded consortium initiative</span>
+            </div>
+            <a href="https://efti4all.eu/" class="text-brand font-bold mt-3 inline-block hover:underline">Learn more &rarr;</a>
+          </div>
+        </div>
+
+        <div data-aos="fade-right" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+          <div class="bg-brand h-2"></div>
+          <div class="p-6">
+            <h3 class="font-bold text-xl">Digital Freight Integration</h3>
+            <p class="mt-2 text-gray-600">Creating a more integrated and efficient digital freight landscape through collaborative frameworks and solutions.</p>
+            <div class="flex items-center gap-2 mt-3">
+              <div class="h-6 w-6 rounded-full bg-brand flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
+              </div>
+              <span class="text-sm font-medium">Cross-platform collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- European Operations Map -->
+  <section class="relative w-screen bg-gradient-to-t px-5 pb-2 from-brand-light to-white">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <div class="flex items-center justify-center gap-3 mb-2">
+          <div class="h-1 w-10 bg-brand"></div>
+          <h3 class="font-bold text-xl text-[#475569] uppercase tracking-wider">OUR OPERATIONS</h3>
+          <div class="h-1 w-10 bg-brand"></div>
+        </div>
+        <h2 class="font-extrabold text-3xl sm:text-4xl lg:text-5xl text-gray-800 max-w-4xl mx-auto mb-4">European Presence</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+        {% include map.html %}
+
+        <div class="lg:col-span-2 space-y-6">
+          <div data-aos="fade-right" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div class="bg-brand h-2"></div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl">Our European Presence</h3>
+              <p class="text-gray-600 mt-2">Our work spans the European Union, with a primary focus on the countries where eFTI4ALL and eFTI4EU projects' partners operate.</p>
+              <p class="text-gray-600 mt-2">Our key activities are centred in Estonia, Finland, and Belgium&mdash;with a pivotal role in supporting the European Commission on eFTI implementation and policy alignment.</p>
+            </div>
+          </div>
+
+          <div data-aos="fade-right" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div class="bg-brand h-2"></div>
+            <div class="p-6">
+              <h3 class="font-bold text-xl">Key Operations</h3>
+              <ul class="mt-2 space-y-4 list-disc pl-5 text-gray-600">
+                <li>Support to the European Commission on eFTI</li>
+                <li>Work with eFTI4ALL partners</li>
+                <li>Implementation and policy alignment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Preview -->
+  <section class="bg-gradient-to-t relative w-screen bg-brand-light pt-4 pb-4">
+    <div class="mx-auto px-6 max-w-5xl">
+      <div class="text-center">
+        <span class="inline-block px-4 py-1 bg-brand-light text-brand font-bold rounded-full text-sm mb-4">OUR TEAM</span>
+        <h2 class="text-4xl lg:text-5xl font-bold mb-8">Meet Our Expert Team</h2>
+        <div class="h-1 w-24 bg-brand mx-auto mb-10"></div>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          At eFTI Experts, we are a team of seasoned professionals dedicated to driving
+          digital and sustainable logistics solutions. With extensive experience in global
+          projects and expertise in smart infrastructure, regulatory compliance, and
+          strategic implementation, we deliver impactful results that shape the future of
+          logistics.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <a href="/about-us/" class="mt-8 inline-block rounded-3xl bg-brand shadow-lg px-8 py-3 text-white font-bold transition-all duration-300 hover:scale-105 text-center text-xl hover:cursor-pointer">
+          Meet the Full Team
+        </a>
+        <p class="text-gray-500 mt-4">Discover the experts driving digital transformation in freight transport</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<hr>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add("overflow-hidden");
+  });
+
+  function fadeUp() {
+    var overlay = document.getElementById("hero-overlay");
+    var container = document.getElementById("content-container");
+    if (overlay) {
+      overlay.classList.add("opacity-0", "-translate-y-[100vh]");
+      container.classList.remove("mt-[100vh]");
+      setTimeout(function() { overlay.classList.add("hidden"); }, 1000);
+      setTimeout(function() { document.body.classList.remove("overflow-hidden"); }, 200);
+    }
+  }
+</script>

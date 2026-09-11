@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-center text-5xl md:text-7xl font-bold mb-6">Our Projects</h1>
+
+    <div class="relative">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center" data-aos="fade-up">
+        {% for project in site.data.projects %}
+          {% include project-card.html title=project.title description=project.description picture=project.picture %}
+        {% endfor %}
+      </div>
+
+      <!-- Project Overlay Modal -->
+      <div id="project_overlay" class="hidden fixed z-30 inset-0 bg-black bg-opacity-50 top-0 items-center justify-center p-4" onclick="toggleProjectOverlay()">
+        <div class="relative">
+          <div class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 bg-opacity-50 text-white text-2xl font-bold cursor-pointer hover:bg-opacity-80 select-none transition">
+            &times;
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow-lg max-w-lg w-full max-h-[80vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <img id="project_overlay_picture" src="" class="w-full rounded-md mb-4 border" alt="">
+            <div class="flex flex-col text-left">
+              <h1 class="text-4xl text-brand font-bold mb-2" id="project_overlay_title"></h1>
+              <p id="project_overlay_description" class="text-gray-600"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function handleProjectClick(element) {
+    var title = element.getAttribute("data-title");
+    var description = element.getAttribute("data-description");
+    var picture = element.getAttribute("data-picture");
+    toggleProjectOverlay(title, description, picture);
+  }
+
+  function toggleProjectOverlay(title, description, picture) {
+    var overlay = document.getElementById("project_overlay");
+    var body = document.body;
+
+    if (title && description && picture) {
+      document.getElementById("project_overlay_picture").src = picture;
+      document.getElementById("project_overlay_title").innerHTML = title;
+      document.getElementById("project_overlay_description").innerHTML = description;
+    }
+
+    body.classList.toggle("overflow-hidden");
+    overlay.classList.toggle("hidden");
+    overlay.classList.toggle("flex");
+  }
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      var overlay = document.getElementById("project_overlay");
+      if (!overlay.classList.contains("hidden")) toggleProjectOverlay();
+    }
+  });
+</script>

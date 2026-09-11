@@ -1,0 +1,11 @@
+# Projects - update with actual data from Django database
+# Each project needs: title, description, picture (path in /images/projects/)
+- title: "eFTI4ALL"
+  description: "Building a functioning eFTI ecosystem with emphasis on seamless interaction between authorities and eFTI Platforms. A CEF-funded consortium initiative dedicated to establishing a robust eFTI ecosystem."
+  picture: "/images/projects/placeholder.jpg"
+  order: 1
+
+- title: "eFTI4EU"
+  description: "Creating a more integrated and efficient digital freight landscape through collaborative frameworks and solutions."
+  picture: "/images/projects/placeholder.jpg"
+  order: 2
