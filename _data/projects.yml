@@ -1,14 +1,52 @@
 - title: eFTI4ALL project
-  description: |
-    The **eFTI4ALL** project, co-funded by the European Commission under the Connecting Europe Facility (CEF) programme, aims to accelerate the adoption and interoperability of the **eFTI Regulation** across EU Member States and the logistics community.
-    Running until 2028 with a budget of €30 million, it brings together 33 partners from six Member States.
-    The project complements the **eFTI4EU** initiative by supporting the broader implementation of digital logistics solutions and promoting the adoption of **eFTI Platforms** across Europe.
-    <br/>
-    <br/>
-    <strong><u>Role of eFTI Experts Team (EET)</u></strong><br/>
-    The **eFTI Experts Team (EET)**, consisting of the founders of **eFTI Experts** company and additional experts Rudy Hemeleers, Marco Gorini, Alexio Picco, and Christian Lüpges, plays a critical role in ensuring the successful implementation of the project's technical and communication goals.
-    The team is responsible for harmonising the development of the interoperable eFTI Exchange Environment, aligning with the **eFTI Regulation** and initiatives like the **Digital Transport and Logistics Forum (DTLF)**.
-    Working closely with the Project Coordination Committee, the EET ensures that the project's activities are executed on time, with technical correctness and cross-fertilisation of ideas between work packages and field operational tests.
-    Additionally, the team leads the development and submission of key deliverables to the European Commission, while supporting the dissemination of project results and fostering stakeholder engagement throughout Europe.
+  description: >-
+    The **eFTI4ALL** project, co-funded by the European Commission under the
+    Connecting Europe Facility (CEF) programme, aims to accelerate the adoption
+    and interoperability of the **eFTI Regulation** across EU Member States and
+    the logistics community.
+
+    Running until 2028 with a budget of €30 million, it brings together 33
+    partners from six Member States.
+
+    The project complements the **eFTI4EU** initiative by supporting the broader
+    implementation of digital logistics solutions and promoting the adoption of
+    **eFTI Platforms** across Europe.
+      
+
+
+      
+
+    ++**Role of eFTI Experts Team (EET)++**  
+
+
+    The **eFTI Experts Team (EET)**, consisting of the founders of **eFTI
+    Experts** company and additional experts Rudy Hemeleers, Marco Gorini,
+    Alexio Picco, and Christian Lüpges, plays a critical role in ensuring the
+    successful implementation of the project's technical and communication
+    goals.
+
+    The team is responsible for harmonising the development of the interoperable
+    eFTI Exchange Environment, aligning with the **eFTI Regulation** and
+    initiatives like the **Digital Transport and Logistics Forum (DTLF)**.
+
+    Working closely with the Project Coordination Committee, the EET ensures
+    that the project's activities are executed on time, with technical
+    correctness and cross-fertilisation of ideas between work packages and field
+    operational tests.
+
+    Additionally, the team leads the development and submission of key
+    deliverables to the European Commission, while supporting the dissemination
+    of project results and fostering stakeholder engagement throughout Europe.
   picture: /images/projects/Blue_Logo_eFTI4ALL.png
   order: 1
+- title: Technical assistance to DG MOVE
+  description: Together with Circle S.p.A., eFTI Experts provided technical
+    assistance to the European Commission’s Directorate-General for Mobility and
+    Transport (DG MOVE) to support the implementation of Regulation (EU)
+    2020/1056 on electronic freight transport information (eFTI). The
+    consultancy focused on facilitating the development and implementation of
+    common procedures and detailed rules for competent authorities to access and
+    process electronic freight transport information. As a result, technical
+    guidance document for authorities (TGD1) was introduced and later on
+    published in eFTI WIKI.
+  picture: /images/projects/dgmove.png
