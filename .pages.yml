@@ -1,0 +1,91 @@
+media:
+  - name: member-images
+    label: Member photos
+    input: images/members
+    output: /images/members
+    categories: [image]
+  - name: project-images
+    label: Project images
+    input: images/projects
+    output: /images/projects
+    categories: [image]
+  - name: site-images
+    label: Site images
+    input: images
+    output: /images
+    categories: [image]
+
+content:
+  - name: team
+    label: Team members
+    type: file
+    path: _data/team.yml
+    format: yaml
+    list: true
+    view:
+      primary: name
+      sort: order
+      order: asc
+    fields:
+      - name: name
+        type: string
+        label: Name
+      - name: title
+        type: string
+        label: Title / Position
+      - name: summary
+        type: rich-text
+        label: Bio
+      - name: picture
+        type: image
+        label: Photo
+        options:
+          media: member-images
+      - name: order
+        type: number
+        label: Display order
+
+  - name: projects
+    label: Projects
+    type: file
+    path: _data/projects.yml
+    format: yaml
+    list: true
+    view:
+      primary: title
+      sort: order
+      order: asc
+    fields:
+      - name: title
+        type: string
+        label: Project title
+      - name: description
+        type: rich-text
+        label: Description
+      - name: picture
+        type: image
+        label: Cover image
+        options:
+          media: project-images
+      - name: order
+        type: number
+        label: Display order
+
+  - name: site
+    label: Site settings
+    type: file
+    path: _config.yml
+    format: yaml
+    fields:
+      - name: title
+        type: string
+        label: Site title
+      - name: description
+        type: text
+        label: Site description
+      - name: url
+        type: string
+        label: Site URL
+      - name: email
+        type: string
+        label: Contact email

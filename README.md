@@ -127,24 +127,24 @@ To set up:
 2. Go to **Settings > Pages > Source** and select **GitHub Actions**
 3. The `CNAME` file sets the custom domain to `eftiexperts.eu`
 
-## CMS (CloudCannon)
+## CMS (Pages CMS)
 
-The site uses [CloudCannon](https://cloudcannon.com) for non-technical content editing. The config is in `.cloudcannon/config.yml`.
+The site uses [Pages CMS](https://pagescms.org) for non-technical content editing. The config is in `.pages.yml`.
 
 ### What business users can edit
 
-- **Team members** (`_data/team.yml`) — name, title, bio (with bold/italic/links), photo, display order
-- **Projects** (`_data/projects.yml`) — title, description (with bold/italic/links), cover image, display order
+- **Team members** (`_data/team.yml`) — name, title, bio, photo, display order
+- **Projects** (`_data/projects.yml`) — title, description, cover image, display order
 - **Site settings** (`_config.yml`) — title, description, email, URL
 
 ### Setup
 
-1. Create a free [CloudCannon](https://cloudcannon.com) account
-2. Connect your GitHub repo
-3. CloudCannon auto-detects the config from `.cloudcannon/config.yml`
-4. Invite business users as editors
+1. Go to [pagescms.org](https://pagescms.org) and sign in with GitHub
+2. Connect your repository
+3. Pages CMS reads `.pages.yml` automatically
+4. Invite business users as collaborators
 
-Changes made in CloudCannon are committed to Git, which triggers the GitHub Actions deploy automatically.
+Changes made in Pages CMS are committed to Git, which triggers the GitHub Actions deploy automatically.
 
 ## Analytics
 

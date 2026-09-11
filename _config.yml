@@ -9,7 +9,6 @@ exclude:
   - .bundle
   - .idea
   - .github
-  - .cloudcannon
   - Gemfile
   - Gemfile.lock
   - package.json
