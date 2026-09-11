@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-center text-5xl md:text-7xl font-bold mb-6">Insights</h1>
+    <p class="text-center text-xl text-gray-600 max-w-4xl mx-auto mb-12">
+      {{ page.subtitle }}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
+      {% assign sorted_insights = site.insights | sort: "date" | reverse %}
+      {% for insight in sorted_insights %}
+        {% include insight-card.html
+           title=insight.title
+           date=insight.date
+           description=insight.description
+           picture=insight.picture
+           url=insight.url
+        %}
+      {% endfor %}
+    </div>
+
+    {% if site.insights.size == 0 %}
+      <p class="text-center text-gray-500 text-lg">No insights published yet. Check back soon!</p>
+    {% endif %}
+  </div>
+</section>

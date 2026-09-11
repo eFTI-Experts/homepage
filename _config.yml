@@ -3,6 +3,10 @@ description: "Estonia's Premier eFTI Consultancy. We support EU member states wi
 url: https://eftiexperts.eu
 email: team@eftiexperts.eu
 permalink: pretty
+collections:
+  insights:
+    output: true
+    permalink: /insights/:name/
 exclude:
   - vendor
   - node_modules
@@ -26,3 +30,7 @@ defaults:
       path: _pages
     values:
       layout: page
+  - scope:
+      type: insights
+    values:
+      layout: insight

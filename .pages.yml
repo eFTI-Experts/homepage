@@ -14,6 +14,11 @@ media:
     input: images
     output: /images
     categories: [image]
+  - name: insight-images
+    label: Insight images
+    input: images/insights
+    output: /images/insights
+    categories: [image]
 
 content:
   - name: team
@@ -70,6 +75,36 @@ content:
       - name: order
         type: number
         label: Display order
+
+  - name: insights
+    label: Insights
+    type: directory
+    path: _insights
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        type: string
+        label: Title
+      - name: date
+        type: datetime
+        label: Publication date
+      - name: description
+        type: text
+        label: Summary
+      - name: picture
+        type: image
+        label: Cover image
+        options:
+          media: insight-images
+      - name: author
+        type: string
+        label: Author
+      - name: body
+        type: rich-text
+        label: Content
 
   - name: site
     label: Site settings
