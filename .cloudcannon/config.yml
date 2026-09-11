@@ -1,0 +1,64 @@
+uploads:
+  destination: images
+  uploads_dir: images/members,images/projects
+
+collections_config:
+  data:
+    team:
+      path: _data/team.yml
+      schema:
+        name: team-member
+        reorder_key: order
+    projects:
+      path: _data/projects.yml
+      schema:
+        name: project
+        reorder_key: order
+
+schemas:
+  team-member:
+    name: Team Member
+    icon: person
+    path: .cloudcannon/schemas/team-member
+    fields:
+      - name: name
+        type: text
+        label: Name
+      - name: title
+        type: text
+        label: Title / Position
+      - name: summary
+        type: markdown
+        label: Bio
+        comment: Supports **bold**, _italic_, and links
+      - name: picture
+        type: image
+        label: Photo
+        options:
+          uploads_dir: images/members
+      - name: order
+        type: number
+        label: Display order
+        comment: Lower numbers appear first
+
+  project:
+    name: Project
+    icon: folder
+    path: .cloudcannon/schemas/project
+    fields:
+      - name: title
+        type: text
+        label: Project title
+      - name: description
+        type: markdown
+        label: Description
+        comment: Supports **bold**, _italic_, and links
+      - name: picture
+        type: image
+        label: Cover image
+        options:
+          uploads_dir: images/projects
+      - name: order
+        type: number
+        label: Display order
+        comment: Lower numbers appear first

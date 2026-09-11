@@ -127,6 +127,25 @@ To set up:
 2. Go to **Settings > Pages > Source** and select **GitHub Actions**
 3. The `CNAME` file sets the custom domain to `eftiexperts.eu`
 
+## CMS (CloudCannon)
+
+The site uses [CloudCannon](https://cloudcannon.com) for non-technical content editing. The config is in `.cloudcannon/config.yml`.
+
+### What business users can edit
+
+- **Team members** (`_data/team.yml`) — name, title, bio (with bold/italic/links), photo, display order
+- **Projects** (`_data/projects.yml`) — title, description (with bold/italic/links), cover image, display order
+- **Site settings** (`_config.yml`) — title, description, email, URL
+
+### Setup
+
+1. Create a free [CloudCannon](https://cloudcannon.com) account
+2. Connect your GitHub repo
+3. CloudCannon auto-detects the config from `.cloudcannon/config.yml`
+4. Invite business users as editors
+
+Changes made in CloudCannon are committed to Git, which triggers the GitHub Actions deploy automatically.
+
 ## Analytics
 
 Google Analytics (`G-480CVMK8YL`) loads only after the user accepts cookies via the consent banner.
