@@ -186,9 +186,9 @@ layout: default
 
 <script>
   function handleMemberClick(element) {
-    var name = element.getAttribute("data-name");
-    var title = element.getAttribute("data-title");
-    var summary = element.getAttribute("data-summary");
+    var name = element.querySelector("h3").innerHTML;
+    var title = element.querySelector(".text-brand").innerHTML;
+    var summary = element.querySelector(".prose").innerHTML;
     var picture = element.getAttribute("data-picture");
     toggleMemberOverlay(name, title, summary, picture);
   }

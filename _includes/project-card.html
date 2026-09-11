@@ -5,5 +5,5 @@
   onclick="handleProjectClick(this)">
   <img class="border rounded-md w-full h-48 object-cover" src="{{ include.picture }}" alt="{{ include.title }}" loading="lazy">
   <h3 class="text-2xl text-brand font-bold">{{ include.title }}</h3>
-  <p class="font-thin line-clamp-2 text-gray-600">{{ include.description }}</p>
+  <div class="font-thin line-clamp-2 text-gray-600 prose prose-sm max-w-none">{{ include.description | markdownify }}</div>
 </div>

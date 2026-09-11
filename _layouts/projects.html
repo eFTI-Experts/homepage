@@ -33,8 +33,8 @@ layout: default
 
 <script>
   function handleProjectClick(element) {
-    var title = element.getAttribute("data-title");
-    var description = element.getAttribute("data-description");
+    var title = element.querySelector("h3").innerHTML;
+    var description = element.querySelector(".prose").innerHTML;
     var picture = element.getAttribute("data-picture");
     toggleProjectOverlay(title, description, picture);
   }
