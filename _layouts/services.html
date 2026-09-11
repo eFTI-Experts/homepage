@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="text-center text-xl text-gray-600 max-w-4xl mx-auto mb-12">{{ page.subtitle }}</p>
+    {% endif %}
+
+    {{ content }}
+  </div>
+</section>
