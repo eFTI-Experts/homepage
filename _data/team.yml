@@ -1,7 +1,75 @@
 # Team members - update with actual data from Django database
 # Each member needs: name, title, summary, picture (path in /images/members/)
-- name: "Team Member"
-  title: "Position"
-  summary: "Bio information will be populated from the Django database."
-  picture: "/images/members/placeholder.jpg"
+- name: "Heiti Mering"
+  title: "Industry & Logistics Digitalisation Expert"
+  summary: "Heiti Mering is a recognised leader in industry and logistics digitalisation, co-founder of the Digital Logistics Center and the Single Window Network.
+  With extensive expertise in transport IT systems, he has played a key role in shaping European rail telematics, public e-services, and vocational training initiatives.
+  His contributions continue to drive innovation and efficiency in the digital transformation of logistics and transport.
+  Heiti has led major IT development projects, including Estonia’s Social Insurance Board e-services, hospital IT systems, and customs-railway integrations.
+  As a former Senior Business Development Manager at Tieto Estonia and a visiting lecturer at Tallinn University of Technology, he remains deeply involved in shaping the future of digital logistics and transport systems."
+  picture: "/images/members/heiti.jpg"
   order: 1
+
+- name: "Peter Bresseleers"
+  title: "Maritime & Transport Data Sharing Expert"
+  summary: "Peter Bresseleers brings over 30 years of expertise in maritime activities, trade, and transport data sharing.
+  A Certified Supply Chain Professional and expert in digital business models, he has played a key role in major EU-funded projects such as eFTI4EU, eFTI4ALL, PortCDM, and DockstheFuture, with a strong focus on data-sharing applications for maritime and inland waterway transport. 
+  As a trusted advisor to the Digital Transport and Logistics Forum (DTLF) and the World Bank, Peter has significantly influenced global standards for digital logistics and port community systems.
+  His leadership in EU maritime regulations and data-sharing initiatives has been instrumental in advancing the digitalisation of global transport systems, shaping the future of sustainable and efficient logistics."
+  picture: "/images/members/peter.jpg"
+  order: 2
+
+- name: "Matti Lankinen"
+  title: "Business Consultant & Logistics Expert"
+  summary: "With over 40 years of experience in international business, Matti Lankinen specialises in sustainable business models and collaborative network building.  
+  Matti has contributed to major EU-funded projects such as eFTI4ALL, eFTI4EU, Remunet and FEDeRATED, providing expertise in project coordination, data governance, and business model planning.
+  He has also led initiatives in C-ITS and automated driving, managing projects like Arctic Challenge, 5G-Routes and 5G-DRIVE.
+  The Finnish Logistics Association's 2024 Logistics Award was presented to Matti Lankinen, Chairman of the Board of Vediafi Oy and entrepreneur, who has worked long-term in Nokia and his own companies focusing on international business development and strategic logistics. 
+  Through the companies he founded, he has been a significant player in the development of smart transport systems.
+  Particularly Vediafi  Ltd has been involved in numerous national and European projects that have focused on the digitalization of logistics, smart transport and increasing the transparency of emissions in supply chains. 
+  Matti Lankinen has also been active in several positions of trust, such as founder, project manager and board member of the transport corridor development network CaaS Nordic, which operates in the Baltic Sea region.
+  The association promotes cooperation between different sectors and brings together authorities, research institutes, organisations and representatives of the business world, both logistics customers and service providers. 
+  With deep expertise in business strategy and logistics, Matti continues to drive successful collaboration and innovation in international markets."
+  picture: "/images/members/matti.png"
+  order: 3
+
+- name: "Ulrika Hurt"
+  title: "International Logistics & eFTI Expert"
+  summary: "Ulrika Hurt has played a key role in shaping digital logistics policies and eFTI implementation across Europe.
+  With a strong academic and policy background, she has influenced EU transport regulations and supported the digital transformation of logistics through research, policy development, and hands-on project leadership. 
+  She co-authored the e-CMR index for the DIGINNO-Proto project and has led high-impact research on Single Window networks and for the EU IT agency eu-LISA.
+  Additionally, she has been actively involved in organising digital logistics testing in Estonia. 
+  Currently completing her doctoral studies in logistics at TalTech, Ulrika holds a master’s degree in economics, law, and political science from the University of Tartu.
+  Her expertise spans high-profile EU research projects, technology transfer initiatives, and strategic policy development, making her a leading voice in advancing digital logistics and eFTI frameworks. "
+  picture: "/images/members/ulrika.jpg"
+  order: 4
+
+- name: "Lasse Nykänen"
+  title: "Transport & Logistics Expert"
+  summary: "Lasse Nykänen is a highly experienced transport and logistics specialist with over 14 years of expertise in digital and sustainable logistics solutions.
+  With a strong academic background in civil and transport engineering, he views transportation as an interconnected network where all modes play a crucial role. 
+  Throughout his career, Lasse has led and contributed to numerous national and international projects, focusing on smart infrastructure, PPP cooperation, and the integration of intelligent transport systems.
+  He has played a key role in major EU-funded initiatives, including eFTI4ALL, eFTI4EU, FEDeRATED, and Arctic Challenge C-ITS, managing project coordination, pilot implementation, and stakeholder collaboration. 
+  His expertise in co-developing innovative transport solutions and fostering cross-sector partnerships has positioned him as a key figure in advancing digital logistics and intelligent transportation systems in Europe."
+  picture: "/images/members/lasse.png"
+  order: 5
+
+- name: "Helena Urbla"
+  title: "Project & Communications Specialist"
+  summary: "Helena Urbla is a rising star in logistics and digital solutions.
+  In 2024, she was awarded the Real-Time Economy Development Science Prize for her thesis on logistics.
+  She is a key contributor to the digitalisation of freight transport in the EU, particularly through her work on the eFTI4EU and eFTI4ALL projects. 
+  In eFTI4EU and eFTI4ALL, Helena plays a central role in external communications, raising awareness of the Electronic Freight Transport Information (eFTI) Regulation.
+  Her efforts have significantly enhanced stakeholder engagement, fostering a supportive environment for the digitalisation of freight transport across the EU.
+  She is instrumental in ensuring the smooth and timely execution of large-scale logistics initiatives."
+  picture: "/images/members/helena.jpg"
+  order: 6
+
+- name: "Johanna Ruljand"
+  title: "Financial & Communications Specialist"
+  summary: "Johanna Ruljand brings a solid background in financial management and communications to the eFTI Experts team.
+  Known for her precision and proactive mindset, she ensures that complex financial processes run smoothly while fostering clear and effective communication across teams and partners.
+  At eFTI Experts, Johanna contributes to the coordination of major EU-funded digital logistics projects, including eFTI4ALL and eFTI4LIVE.
+  She is always eager to take on new challenges and continuously develop her skills to advance the digital transformation of freight transport in Europe."
+  picture: "/images/members/johanna.jpg"
+  order: 7
