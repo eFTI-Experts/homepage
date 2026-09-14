@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en" class="h-full" prefix="og: https://ogp.me/ns#">
 <head>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -78,9 +78,9 @@
 
   {{ page.extra_head }}
 </head>
-<body class="font-sans text-gray-900 bg-white">
+<body class="font-sans text-gray-900 bg-white min-h-screen flex flex-col">
   {% include navbar.html %}
-  <main>
+  <main class="flex-1">
     {{ content }}
   </main>
   {% include footer.html %}
