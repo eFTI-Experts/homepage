@@ -93,10 +93,11 @@
   <script>
     (function() {
       var GA_ID = 'G-480CVMK8YL';
-      var consent = localStorage.getItem('cookie_consent');
-      var banner = document.getElementById('cookie-banner');
+      var gaLoaded = false;
 
       function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -106,28 +107,47 @@
         gtag('config', GA_ID);
       }
 
-      function showBanner() { banner.classList.remove('hidden'); }
+      function init() {
+        var consent = localStorage.getItem('cookie_consent');
+        var banner = document.getElementById('cookie-banner');
+        if (!banner) return;
 
-      if (consent === 'accepted') { loadGA(); }
-      else if (!consent) { showBanner(); }
+        function showBanner() { banner.classList.remove('hidden'); }
 
-      document.getElementById('cookie-accept').addEventListener('click', function() {
-        localStorage.setItem('cookie_consent', 'accepted');
-        banner.classList.add('hidden');
-        loadGA();
-      });
+        if (consent === 'accepted') { loadGA(); }
+        else if (!consent) { showBanner(); }
 
-      document.getElementById('cookie-decline').addEventListener('click', function() {
-        localStorage.setItem('cookie_consent', 'declined');
-        banner.classList.add('hidden');
-      });
+        var acceptBtn = document.getElementById('cookie-accept');
+        var declineBtn = document.getElementById('cookie-decline');
 
-      var settingsLink = document.getElementById('cookie-settings-link');
-      if (settingsLink) {
-        settingsLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          showBanner();
-        });
+        if (acceptBtn) {
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'accepted');
+            banner.classList.add('hidden');
+            loadGA();
+          });
+        }
+
+        if (declineBtn) {
+          declineBtn.addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'declined');
+            banner.classList.add('hidden');
+          });
+        }
+
+        var settingsLink = document.getElementById('cookie-settings-link');
+        if (settingsLink) {
+          settingsLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showBanner();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
       }
     })();
   </script>
