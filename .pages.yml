@@ -78,8 +78,9 @@ content:
 
   - name: insights
     label: Insights
-    type: directory
+    type: collection
     path: _insights
+    filename: "{primary}.md"
     view:
       primary: title
       sort: date
