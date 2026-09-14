@@ -46,7 +46,7 @@
     "sameAs": ["https://www.linkedin.com/company/efti-experts/"],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Laeva 2",
+      "streetAddress": {{ site.address | split: "," | first | strip | jsonify }},
       "addressLocality": "Tallinn",
       "addressCountry": "Estonia"
     },

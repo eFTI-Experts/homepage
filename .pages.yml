@@ -125,3 +125,12 @@ content:
       - name: email
         type: string
         label: Contact email
+      - name: address
+        type: string
+        label: Company address
+      - name: vat
+        type: string
+        label: VAT number
+      - name: year
+        type: string
+        label: Copyright year

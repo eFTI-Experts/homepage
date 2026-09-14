@@ -21,7 +21,7 @@ The content on this website is provided for general information purposes only. W
 
 The data controller for this website is:
 eFTI Experts OÜ
-Laeva 2, Tallinn, 10111, Estonia
+{{ site.address }}
 
 ### b. Data Collected
 
