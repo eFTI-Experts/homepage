@@ -87,8 +87,8 @@
   {% include cookie-banner.html %}
 
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js" onerror="console.warn('AOS failed to load')"></script>
+  <script>if (typeof AOS !== 'undefined') AOS.init();</script>
 
   <script>
     (function() {
@@ -112,7 +112,12 @@
         var banner = document.getElementById('cookie-banner');
         if (!banner) return;
 
-        function showBanner() { banner.classList.remove('hidden'); }
+        function showBanner() {
+          banner.classList.remove('hidden');
+          banner.style.display = '';
+          banner.style.opacity = '';
+          banner.style.visibility = '';
+        }
 
         if (consent === 'accepted') { loadGA(); }
         else if (!consent) { showBanner(); }
@@ -144,11 +149,10 @@
         }
       }
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
+      // requestAnimationFrame guarantees the DOM is ready and runs before the next paint
+      requestAnimationFrame(function() {
+        requestAnimationFrame(init);
+      });
     })();
   </script>
 </body>
