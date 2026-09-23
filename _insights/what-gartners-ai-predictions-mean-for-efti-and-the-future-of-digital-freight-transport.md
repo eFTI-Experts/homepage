@@ -2,6 +2,7 @@
 title: What Gartner’s AI Predictions Mean for eFTI and the Future of Digital
   Freight Transport
 date: 7 April 2026
+picture: /images/insights/1774251953305.jpeg
 author: Peter Bresseleers
 ---
 The digital transformation of freight transport is accelerating across Europe. At the same time, artificial intelligence is reshaping how organizations process information and make decisions. Recent strategic forecasts published by Gartner offer an interesting lens through which to view the emerging electronic Freight Transport Information (#eFTI) ecosystem. In its report 'Strategic Predictions for 2026', Gartner highlights how AI will increasingly influence business processes, governance structures and digital infrastructures across industries. (Source: [https://www.gartner.com/en/articles/strategic-predictions-for-2026](https://www.gartner.com/en/articles/strategic-predictions-for-2026)) Although the report focuses primarily on enterprise technology, several of its themes resonate strongly with developments in the European freight transport sector. In particular, the growing importance of trusted data infrastructures aligns closely with the objectives of #eFTI.
