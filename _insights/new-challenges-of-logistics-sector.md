@@ -1,6 +1,7 @@
 ---
 title: New challenges of logistics sector
 date: 11 November 2025
+picture: /images/insights/1762774479643.png
 author: Lasse Nykänen
 ---
 The transport and logistics sector is in the midst of a triple transition, where sustainability, digitalisation, and resilience are transforming our daily routines and processes. Development and innovation are a natural part of global evolution, but at the moment, the logistics sector seems to be experiencing an exceptionally rapid pace of change.
@@ -20,8 +21,6 @@ The project included three main tasks:
 1. Mapping relevant regulations,
 2. Developing a logistics digitalisation demo, and
 3. Initiating a national logistics market discussion forum between authorities and the private sector.
-
-
 
 From **[eFTI EXPERTS](https://eftiexperts.eu/about-us)**, Lasse and Matti were part of the project’s core team, as [Vediafi](https://www.vedia.fi/digital-and-managed-future-of-logistics-dihalot-project/) was responsible for tasks 1 and 3.
 
